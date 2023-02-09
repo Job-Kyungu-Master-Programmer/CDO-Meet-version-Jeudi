@@ -1,0 +1,22 @@
+
+// This is an Classe Issue in HTML File ===> Meeting.html ,
+//It's Design is only for Element positioning with (Position-Absolute)
+/// ==> But Full Calendar Design is in SCSS File ==> Calendar.scss
+.MeetingCalendar {
+    position: absolute;
+    top: 4em;
+    left: 15.90em;
+    @include AllCalendar();
+
+    @media (max-width: 700px) {
+        top: 6.55em;
+        left: .12em;
+        font-size: calc(0vw + .80em);
+    }
+}
+
+//Element Toggle in JS  file AppCalendar.js and Meeting.html
+.OPenMeetingCalendar {//Element Toggle in JS  file AppCalendar.js
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path .85s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
